@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>MiiSalad</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <h1>MiiSalad</h1>
+
+  {% for Recipes in all_Recipes %}
+
+  <div class="recette">
+    <img src="{{ Recipes.Photo_url }}" />
+    <div class="Recette-content">
+      <h3><a href="/Recipes/{{ Recipes.id }}">{{ Recipes.Titre }} </a></h3>
+      <p><a href="/Recipes/{{ Recipes.id }}"></a></p>
+    </div>
+  </div>
+
+  {% endfor %}
+</body>
+
+</html>
